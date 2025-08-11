@@ -1,0 +1,1293 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+}
+
+
+body {
+  margin: 0;
+  font-family: "OpenSans";
+}
+
+/* CТИЛИ ДЛЯ ШАПКИ */
+.conteiner-header {
+  width: 100%;
+  min-height: 640px;
+  background-image: url(../images/banner-bg.jpg);
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.conteiner-header::before {
+  content: '';
+  display: block;
+  
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 225px;
+
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.logo-header-img {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+
+  right: 15px;
+  top: 30px;
+}
+
+.line {
+  height: 2px;
+  width: 20px;
+  margin-top: 4px;
+  background-color: #ffffff;
+}
+
+.menu {
+  display: none;
+}
+
+.header-title {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+
+  margin-top: 40px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* CSS СТИЛИ ДЛЯ ТРЕНДОВ */
+.trends {
+  margin: 0;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+
+  position: relative;
+}
+
+.main-title:after {
+  content: "";
+  width: 66px;
+  height: 3px;
+  position: absolute;
+  
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #b59f5b;
+}
+
+.trending-news {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.trend-post1, .trend-post2, .trend-post3, .trend-post4 {
+  width: 100%;
+  height: 330px;
+  background-color: #eff6f1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+
+  position: relative;
+}
+
+.trend-post1::before, .trend-post2::before, .trend-post3::before, .trend-post4::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.trend-post1 {
+  background-image: url(../images/trend1.jpg);
+}
+
+.trend-post2 {
+  background-image: url(../images/trend2.jpg);
+}
+
+.trend-post3 {
+  background-image: url(../images/trend3.jpg);
+}
+
+.trend-post4 {
+  background-image: url(../images/trend4.jpg);
+}
+
+.trend-info {
+  background-color: rgba(0,0,0,0);
+  border: 3px solid #b59f5b;
+
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  left: 20px;          
+  right: 20px; 
+
+  width: auto;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start;
+
+  padding-left: 20px;
+  box-sizing: border-box;
+
+  z-index: 3;
+}
+
+.trend-tags-list {
+  position: relative;
+  z-index: 4;
+
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+
+  margin-top: 35px;
+}
+
+.tag {
+  text-decoration: none;
+  color: #b59f5b;
+  font-weight: 700;
+  font-size: 14px;
+
+  text-transform: uppercase;
+}
+
+.trend-post-header {
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 35px;
+}
+
+.trend-post-header-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 5;
+}
+
+ /* CSS СТИЛИ ДЛЯ ОСНОВНЫХ ПОСТОВ */
+.posts {
+  width: 100%;
+}
+
+.post-section.first-post {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.post-section {
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.post-content::after, .post-section.first-post::after {
+  content: "";
+  margin: 0 15px;
+  width: calc(100% - 30px);
+  height: 3px;
+  position: absolute;
+  
+  bottom: -20px;
+  left: auto;
+
+  background-color: #eeeeee;
+}
+
+.post-section-img {
+  width: calc(100% - 30px);
+  margin: 0;
+  margin: 0 15px;
+  height: 250px;
+}
+
+.post-content {
+  margin: 0 15px;
+  width: calc(100% - 30px);
+
+  position: relative;
+}
+
+.tags-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.post-header {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.post-header-link {
+  text-decoration: none;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.post-meta {
+  display: flex;
+  gap: 10px;
+  
+  margin-bottom: 20px;
+}
+
+.post-date {
+  font-weight: 400;
+  font-size: 12px;
+  color: #888888;
+}
+
+.post-author {
+  font-weight: 700;
+  font-size: 12px;
+  color: #000000;
+}
+
+.post-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0f0d0e;
+}
+
+ /* CSS СТИЛИ ДЛЯ БОКОВОЙ ПАНЕЛИ */
+.sidebar {
+  margin: 0 15px;
+  width: calc(100% - 30px);
+  margin-top: 65px;
+}
+
+.sidebar-header {
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  
+  position: relative;
+}
+
+.sidebar-header:after {
+  content: "";
+  width: 66px;
+  height: 3px;
+  position: absolute;
+
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b59f5b;
+}
+
+.sidebar-img {
+  width: 70px;
+  height: 70px;
+}
+
+.sidebar-content {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sidebar-meta {
+  margin-left: 20px;
+}
+
+.sidebar-date {
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  opacity: 0.541;
+}
+
+.sidebar-header-meta {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sidebar-search {   
+  margin: 0;                        
+  margin-top: 60px;
+  display: flex;
+}
+
+.sidebar-form-search {
+  appearance: none;
+  width: calc(100% - 30px); 
+  border: 0;
+  height: 48px;
+  background-color: #f4f7f6;
+  padding-left: 20px;
+}
+
+.sidebar-form-search:placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  opacity: 0.541;
+  color: #000000;
+}
+
+.sidebar-search-button {
+  width: 48px;
+  height: 48px;
+  background-color: #b59f5b;
+  background-image: url('../svg/search.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+  border: 0;
+}
+
+.sidebar-mailing {
+  margin-top: 45px;
+}
+
+.sidebar-form-email {
+  appearance: none;  
+  border: 0;
+  margin-top: 40px;
+    
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  background-color: #f4f7f6;
+  
+  padding-left: 20px;
+}
+
+.sidebar-form-email:placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  opacity: 0.541;
+  color: #000000;
+}
+
+.sidebar-form-email:focus {
+  outline: none;
+  background-color: #f4f7f6;
+  border: 1px solid #b59f5b;
+}
+
+.sidebar-subscribe-button {
+  appearance: none;  
+  border: 0;  
+  margin-top: 15px;
+
+  font-weight: 700;
+  font-size: 12px;
+  
+  text-transform: uppercase;
+  color: #0f0d0e;
+  
+  width: 100%;
+  box-sizing: border-box;
+  height: 48px;
+  background-color: #b59f5b;
+}
+
+.sidebar-tags {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sidebar-tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  margin-top: 40px;
+  
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px 5px;
+}
+
+.sidebar-tag {
+  height: 30px;
+
+  background-color: rgba(244, 243, 241, 0);
+  border: 3px solid #eeeeee;
+  padding: 5px 15px;
+  
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  box-sizing: border-box;
+}
+
+.sidebar-tag:hover {
+  height: 30px;
+  background-color: rgba(244,243,241,0);
+  border: 3px solid #b59f5b;
+}
+
+.sidebar-themes {
+  margin-top: 45px;
+}
+
+.sidebar-themes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 45px;
+}
+
+.sidebar-themes-item {
+  margin-bottom: 35px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 15px;
+  margin-bottom: 15px; 
+}
+
+.sidebar-themes-item:last-child {
+  margin-bottom: 0;
+}
+
+.topic {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+}
+
+.topic-count {
+  font-weight: 700;
+  font-size: 12px;
+  color: #b59f5b;
+}
+
+/* CSS СТИЛИ ДЛЯ БЛОКА НАШИ ИЗДЕЛИЯ */
+.products {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.product {
+  margin: 0 15px;
+  position: relative;
+
+  margin-top: 45px;
+}
+
+.product::before {
+  content: "";
+  position: absolute;
+  top: 170px; /* смещение вниз */
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+
+  border: 3px solid #b59f5b;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.product-info {
+  margin-left: 20px;
+}
+
+.product-header-link {
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  font-weight: 700;
+}
+
+ .product-short-description {
+  font-size: 15px;
+  line-height: 22px;
+  color: #0f0d0e;
+  font-weight: 400;
+}
+
+.product-info-link {
+  color: #b59f5b;
+  text-decoration: none;
+}
+
+.product-purchase {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+
+.product-price {
+  margin-left: 20px;
+}
+
+.product-old-price {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  font-weight: 700;
+}
+
+.product-new-price {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  font-weight: 700;
+}
+
+.store {
+  border: none;
+  width: 140px;
+  height: 48px;
+  background-color: #b59f5b;
+
+  margin-right: 20px;
+
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* CSS СТИЛИ ДЛЯ ПОДВАЛА */
+.container-footer {
+  margin: 0; 
+  margin-top: 70px;
+}
+
+.footer {
+  margin: 0 15px;
+  width: calc(100% - 30px);
+  height: 83px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f7f6;
+}
+
+.tags-list {
+  list-style: none;
+
+  display: flex;
+  gap: 20px;
+}
+
+.icon-img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-wrap {
+  margin: 0 15px;
+  width: calc(100% - 30px);
+  
+  height: 15px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.text-copyright {
+  font-weight: 700;
+  font-size: 12px;
+  color: #999999;
+}
+
+/* СТИЛИ ДЛЯ ВСПЛЫВАЮЩЕГО ОКНА */
+.popup._hidden {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+}
+
+.popup-content {
+  width: 90%; 
+  height: auto;
+  background-color: #ffffff;
+
+  position: relative;
+}
+
+.popup-content::after {
+  content: ""; 
+  position: absolute;
+  top: -20px;
+  right: 3px;
+
+  background-image: url(../svg/form-x.svg);
+  background-repeat: no-repeat;
+
+  width: 15px;
+  height: 15px;
+
+  cursor: pointer;
+}
+
+.popup-title {
+  margin: 0;
+  margin-top: 30px;
+
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+
+  position: relative;
+
+  margin-bottom: 40px;
+}
+
+.popup-title:after {
+  content: "";
+  width: 66px;
+  height: 3px;
+  position: absolute;
+    
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #b59f5b;
+}
+
+.popup-form {
+  margin: 0;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.popup-form-label {
+  font-size: 12px;
+  color: #000;
+}
+
+.visit-frequency-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  height: 40px;
+
+  border: none;
+  background-color: #f4f7f6;
+  padding-left: 15px;
+
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+
+  margin-top: 5px;
+  cursor: pointer;
+
+  background-image: url(../svg/form-arrows.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right 15px center;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 5px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.radio-consent {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 15px;
+  height: 15px;
+  border: 2px solid #b59f5b;
+  border-radius: 50%;
+}
+
+.radio-consent:checked {
+  background-color: #b59f5b;
+  box-shadow: inset 0 0 0 2px #fff; 
+}
+
+.popup-text {
+  height: 120px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #f4f7f6;
+  border: none;
+
+  margin-top: 10px;
+  resize: none;
+}
+
+.popup-text::placeholder {
+  padding-top: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+
+  font-weight: 400;
+  font-size: 13px;
+  opacity: 0.541;
+  color: #000000;
+}
+
+.send-form {
+  margin: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  border: 0; 
+
+  height: 47px;
+  background-color: #b59f5b;
+}
+
+@media (min-width: 641px) and (max-width: 1200px) { /* ВЕРСИЯ ДЛЯ ПЛАНШЕТА */
+   .conteiner-header {
+    width: 100%;
+    min-height: 385px;
+  }
+
+  .header {
+    padding-top: 0;
+  }
+
+  .burger-menu {
+    right: 35px;
+    top: 50px;
+  }
+
+  .logo-header-img {
+    width: 160px;
+    height: 35px;
+
+    padding: 0;
+    padding-left: 30px;
+    margin-top: 42px;
+  }
+
+  .header-title {
+    font-size: 40px;
+
+    margin-top: 0;
+    margin-top: 100px;
+  }
+
+  /* CSS СТИЛИ ДЛЯ ТРЕНДОВ */
+  .trends {
+    margin: 0;
+    margin-top: 50px;
+  }
+
+  .main-title {
+   font-size: 18px;
+  }
+
+  .trending-news {
+    margin-top: 35px;
+  }
+
+  .trend-post1, .trend-post2, .trend-post3, .trend-post4 {
+    width: calc((100% - 5px) / 2);
+    height: 250px;
+  }
+
+  /* CSS СТИЛИ ДЛЯ ОСНОВНЫХ ПОСТОВ */
+  .container-main {
+    width: calc(100% - 70px);
+    margin: 0 35px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .posts {
+    width: 66.6%;
+  }
+
+  .post-section.first-post {
+    width: calc(100% + 40px);
+    min-height: 520px;
+  }
+
+  .post-section {
+    width: calc(100% + 40px);
+    min-height: 520px;
+  }
+
+  .post-section-img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .post-content {
+    margin: 0;
+    width: 100%;
+  }
+
+  .tags-list {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .post-header {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  .post-header-link {
+    font-size: 17px;
+  }
+
+  .post-meta {
+    margin-bottom: 35px;
+  }
+
+  .post-text {
+    font-size: 15px;
+    color: #0f0d0e;
+  }
+
+  /* CSS СТИЛИ ДЛЯ БОКОВОЙ ПАНЕЛИ */
+  .sidebar {
+    width: calc(100% - 80px);
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 80px;
+  }
+
+  .sidebar-meta {
+    margin-left: 20px;
+  }
+
+  .sidebar-search {                         
+    margin-top: 55px;
+  }
+
+  .sidebar-mailing {
+    margin-top: 60px;
+  }
+
+  .sidebar-tags {
+    margin-top: 60px;
+    margin-bottom: 55px;
+  }
+
+  .sidebar-themes {
+    margin-top: 40px;
+  }
+
+  /* CSS СТИЛИ ДЛЯ БЛОКА НАШИ ИЗДЕЛИЯ */
+  .our-products {
+    margin: 0 35px;
+  }
+
+  .main-title {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .products {
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+
+    gap: 50px 20px;
+  }
+
+  .product {
+    margin: 0;
+    width: calc(50% - 20px);
+  }
+
+  /* CSS СТИЛИ ДЛЯ ПОДВАЛА */
+  .container-footer {
+    margin-top: 50px;
+  }
+
+  .footer {
+    margin: 0;
+    margin: 0 35px;
+    width: calc(100% - 70px);
+  }
+
+  /* СТИЛИ ДЛЯ ВСПЛЫВАЮЩЕГО ОКНА */
+  .popup-content {
+    width: 50%; 
+  }
+
+  .popup-title {
+    margin-top: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 35px;
+  }
+
+  .popup-form-label {
+    font-size: 14px;
+  }
+
+  .visit-frequency-select {
+    font-size: 14px;
+  }
+
+  .radio-group {
+    font-size: 14px;
+  }
+
+  .popup-text {
+    height: 125px;
+  }
+}
+
+@media (min-width: 1201px) { /* ВЕРСИЯ ДЛЯ КОМПЬЮТЕРА */
+
+  /* CТИЛИ ДЛЯ ШАПКИ */
+  .conteiner-header {
+    min-height: 450px;
+    padding: 0 230px;
+    box-sizing: border-box;
+
+    min-width: 1660px;
+  }
+
+  .header {
+    padding: 0;
+    margin: 0 15px;
+  }
+
+  .main-header-content {
+    display: flex;
+    justify-content: space-between;
+      
+    position: relative;
+    z-index: 2;
+    padding-top: 40px;
+    box-sizing: border-box;
+  }
+
+  .logo-header-img {
+    margin: 0;
+    padding: 0;
+    min-width: 180px;
+    min-height: 40px;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .menu {
+    list-style-type: none;
+    display: flex;
+  }
+
+  .header-list-item {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 35px;
+
+    font-size: 13px;
+    
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .header-title {
+    min-width: 240px;
+    padding: 0 245px;
+    box-sizing: border-box;
+
+    font-size: 45px;
+    align-items: center;
+
+    margin-top: 120px;
+  }
+
+  /* CSS СТИЛИ ДЛЯ ТРЕНДОВ */
+  .trends {
+    margin: 0;
+    margin-top: 65px;
+    min-width: 1660px;
+  }
+
+  .main-title {
+    font-size: 20px;
+  } 
+
+  .trending-news {
+    flex-wrap: nowrap;
+  }
+
+  .trend-post1, .trend-post2, .trend-post3, .trend-post4 {
+    width: calc((100% - 15px) / 4);
+    height: 320px;
+  }
+
+  .trend-post-header-link {
+    font-size: 20px;
+  }
+
+  /* CSS СТИЛИ ДЛЯ ОСНОВНЫХ ПОСТОВ */
+  .container-main {
+    min-width: 1660px;
+    margin: 0;
+    display: flex;
+
+    padding: 0 230px;
+    box-sizing: border-box;
+
+    margin-bottom: 60px;
+  }
+
+  .posts {
+    min-width: 760px;
+    margin-right: 110px;
+    margin-left: 15px;
+  }
+
+  .post-section, .post-section.first-post {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 60px;
+  }
+
+  .post-content::after, .post-section.first-post::after {
+    content: none;
+  }
+
+  .post-section-img {
+    margin: 0;
+    width: auto;
+  }
+
+  /* CSS СТИЛИ ДЛЯ БОКОВОЙ ПАНЕЛИ */
+  .sidebar {
+    margin: 0;
+    margin-top: 60px;
+    margin-right: 15px;
+
+    min-width: 270px;
+  }
+
+  .sidebar-mailing {
+    margin-top: 60px;
+  }
+
+  .sidebar-form-email {
+    margin-top: 40px;
+  }
+
+  /* CSS СТИЛИ ДЛЯ БЛОКА НАШИ ИЗДЕЛИЯ */
+
+  .our-products {
+    min-width: 1660px;
+    padding: 0 230px;
+    box-sizing: border-box;
+  }
+ 
+  .products {
+    margin: 0;
+    flex-direction: row;
+   
+    gap: 65px;
+    margin-top: 45px;
+  }
+
+  .product {
+    margin: 0;
+    width: calc(33.3% - 30px);
+  }
+
+  /* CSS СТИЛИ ДЛЯ ПОДВАЛА */
+  .container-footer {
+    margin: 0; 
+    margin-top: 60px;
+
+    min-width: 1660px;
+    padding: 0 230px;
+    box-sizing: border-box;
+  }
+
+  .footer {
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer-wrap {
+    margin: 0;
+    min-width: 1660px;
+    padding: 0 230px;
+    box-sizing: border-box;
+
+    margin-top: 70px;
+    margin-bottom: 45px;
+  }
+
+  /* СТИЛИ ДЛЯ ВСПЛЫВАЮЩЕГО ОКНА */
+  .popup-content {
+    width: 25%; 
+  }
+
+  .popup-title {
+    margin-top: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 35px;
+  }
+
+  .popup-form-label {
+    font-size: 14px;
+  }
+
+  .visit-frequency-select {
+    font-size: 14px;
+  }
+
+  .radio-group {
+    font-size: 14px;
+  }
+
+  .popup-text {
+    height: 125px;
+  }
+}
